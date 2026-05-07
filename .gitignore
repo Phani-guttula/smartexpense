@@ -1,0 +1,15 @@
+.idea/
+.vscode/
+.metadata/
+.settings/
+.project
+.classpath
+
+**/target/
+**/node_modules/
+**/dist/
+
+*.log
+.env
+
+**/src/main/resources/application.yml
