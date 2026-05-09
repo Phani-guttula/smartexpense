@@ -2,16 +2,12 @@ import { useState, useEffect } from 'react';
 import { toast } from 'react-hot-toast';
 import expenseService from '../services/expenseService';
 import ExpenseListItem from '../components/Expenses/ExpenseListItem';
-import AddExpenseForm from '../components/Expenses/AddExpenseForm';
+import AddExpenseFormWithOCR from '../components/Expenses/AddExpenseFormWithOCR';
 import Modal from '../components/Common/Modal';
 import LoadingSpinner from '../components/Common/LoadingSpinner';
 import EmptyState from '../components/Common/EmptyState';
 import Button from '../components/Common/Button';
 
-/**
- * Main expenses list page
- * Shows all user expenses with filtering options
- */
 const ExpenseList = () => {
   const [expenses, setExpenses] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -115,7 +111,7 @@ const ExpenseList = () => {
     setFilters(prev => ({
       ...prev,
       [name]: value,
-      page: 0 // Reset to first page when filter changes
+      page: 0
     }));
   };
 
@@ -189,14 +185,13 @@ const ExpenseList = () => {
         )}
       </main>
 
-      {/* Add/Edit Modal */}
       <Modal
         isOpen={showAddModal}
         onClose={handleModalClose}
         title={editingExpense ? 'Edit Expense' : 'Add New Expense'}
         size="lg"
       >
-        <AddExpenseForm
+        <AddExpenseFormWithOCR
           editExpense={editingExpense}
           onSuccess={editingExpense ? handleEditSuccess : handleAddSuccess}
           onCancel={handleModalClose}

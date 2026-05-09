@@ -1,6 +1,6 @@
 package com.smartexpense.service;
 
-import com.smartexpense.dto.CategoryDTO;
+import com.smartexpense.dto.response.CategoryDTO;
 import com.smartexpense.model.Category;
 import com.smartexpense.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;

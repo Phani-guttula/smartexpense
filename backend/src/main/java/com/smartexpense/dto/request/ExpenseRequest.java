@@ -1,4 +1,4 @@
-package com.smartexpense.dto;
+package com.smartexpense.dto.request;
 
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;

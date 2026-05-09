@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.smartexpense.dto.CategoryDTO;
 import com.smartexpense.dto.response.ApiResponse;
+import com.smartexpense.dto.response.CategoryDTO;
 import com.smartexpense.service.CategoryService;
 
 @RestController

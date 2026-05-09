@@ -1,8 +1,8 @@
 package com.smartexpense.service;
 
-import com.smartexpense.dto.DashboardDTO;
-import com.smartexpense.dto.ExpenseRequest;
-import com.smartexpense.dto.ExpenseResponse;
+import com.smartexpense.dto.request.ExpenseRequest;
+import com.smartexpense.dto.response.DashboardDTO;
+import com.smartexpense.dto.response.ExpenseResponse;
 import com.smartexpense.exception.BadRequestException;
 import com.smartexpense.exception.ResourceNotFoundException;
 import com.smartexpense.model.Category;

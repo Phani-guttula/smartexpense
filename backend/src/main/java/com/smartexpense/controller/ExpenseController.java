@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.smartexpense.dto.ExpenseRequest;
-import com.smartexpense.dto.ExpenseResponse;
+import com.smartexpense.dto.request.ExpenseRequest;
 import com.smartexpense.dto.response.ApiResponse;
+import com.smartexpense.dto.response.ExpenseResponse;
 import com.smartexpense.service.ExpenseService;
 
 import jakarta.validation.Valid;

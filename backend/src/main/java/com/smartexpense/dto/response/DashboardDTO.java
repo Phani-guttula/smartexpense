@@ -1,4 +1,4 @@
-package com.smartexpense.dto;
+package com.smartexpense.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

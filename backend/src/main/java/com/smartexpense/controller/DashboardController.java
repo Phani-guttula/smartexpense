@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.smartexpense.dto.DashboardDTO;
 import com.smartexpense.dto.response.ApiResponse;
+import com.smartexpense.dto.response.DashboardDTO;
 import com.smartexpense.service.ExpenseService;
 
 @RestController
