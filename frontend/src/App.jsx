@@ -4,13 +4,38 @@ import { AuthProvider } from './context/AuthContext';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import Dashboard from './pages/Dashboard';
+import ExpenseList from './pages/ExpenseList';
 import ProtectedRoute from './components/Common/ProtectedRoute';
 
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <Toaster position="top-right" />
+        <Toaster 
+          position="top-right"
+          toastOptions={{
+            duration: 3000,
+            style: {
+              background: '#363636',
+              color: '#fff',
+            },
+            success: {
+              duration: 3000,
+              iconTheme: {
+                primary: '#10B981',
+                secondary: '#fff',
+              },
+            },
+            error: {
+              duration: 4000,
+              iconTheme: {
+                primary: '#EF4444',
+                secondary: '#fff',
+              },
+            },
+          }}
+        />
+        
         <Routes>
           {/* Public Routes */}
           <Route path="/login" element={<Login />} />
@@ -25,11 +50,20 @@ function App() {
               </ProtectedRoute>
             }
           />
+          
+          <Route
+            path="/expenses"
+            element={
+              <ProtectedRoute>
+                <ExpenseList />
+              </ProtectedRoute>
+            }
+          />
 
           {/* Default Route */}
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           
-          {/* 404 Route */}
+          {/* 404 Catch-all */}
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>
       </Router>
