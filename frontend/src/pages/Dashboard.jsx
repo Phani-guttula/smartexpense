@@ -213,8 +213,9 @@ const Dashboard = () => {
                   </p>
                 </button>
 
+                {/* UPDATED - Change from toast to navigate */}
                 <button
-                  onClick={() => toast.info('ITR report feature coming soon!')}
+                  onClick={() => navigate('/reports')}
                   className="p-4 border-2 border-dashed border-gray-300 rounded-lg hover:border-primary hover:bg-indigo-50 transition text-left"
                 >
                   <div className="text-2xl mb-2">📊</div>

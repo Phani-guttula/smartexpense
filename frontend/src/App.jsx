@@ -5,6 +5,7 @@ import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 import Dashboard from './pages/Dashboard';
 import ExpenseList from './pages/ExpenseList';
+import Reports from './pages/Reports';  // NEW
 import ProtectedRoute from './components/Common/ProtectedRoute';
 
 function App() {
@@ -56,6 +57,16 @@ function App() {
             element={
               <ProtectedRoute>
                 <ExpenseList />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* NEW - Reports Route */}
+          <Route
+            path="/reports"
+            element={
+              <ProtectedRoute>
+                <Reports />
               </ProtectedRoute>
             }
           />
